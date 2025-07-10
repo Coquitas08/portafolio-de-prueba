@@ -23,7 +23,7 @@ Footer: Es la parte de abajo. Contiene enlaces a mis redes sociales, como Instag
 
 El archivo style.css se encarga de que todo se vea bien. Decide los colores, tamaños, dónde va cada cosa y cómo se mueven algunos elementos. Por ejemplo, le da el color de fondo a la página, hace que la cabecera se quede fija arriba, y que el menú se vea ordenado. También define cómo se ven las tarjetas de proyectos, las cajas de habilidades y el formulario de contacto, añadiéndoles sombras y efectos cuando pasas el ratón por encima. Las secciones de contenido tienen un estilo común, y el pie de página también tiene su propio diseño para los enlaces de redes sociales.
 
-  4): JAVA SRCIPT:
+  4. JAVA SRCIPT:
 
 El archivo java.js hace que la página sea interactiva. La función clave es mostrarSeccion(id). Cuando haces clic en una opción del menú, esta función esconde todas las secciones y luego muestra solo la que elegiste. Esto hace que la página cambie de contenido sin recargarse. Además, al cargar la página por primera vez, el portafolio siempre muestra la sección de "Proyectos".
 
