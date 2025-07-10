@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio personal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="JAVA/java.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo-title">
+                <img src="https://static.wikia.nocookie.net/kirby/images/8/86/KRtDLD_Kirby.png/revision/latest?cb=20230214153003" alt="Logo">
+                <span class="titulo">Mi portafolio</span>
+            </div>
+            <nav class="sidebar">
+                <span class="sidebar-title">Menú</span>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="mostrarSeccion('proyectos')">Proyectos</a></li>
+                    <li><a href="javascript:void(0)" onclick="mostrarSeccion('habilidades')">Habilidades</a></li>
+                    <li><a href="javascript:void(0)" onclick="mostrarSeccion('peliculas')">Películas</a></li>
+                    <li><a href="javascript:void(0)" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="contenido-principal">
+            <div class="sobre-mi">
+                <img src="https://static.wikia.nocookie.net/villainsfanon/images/f/f2/IllJohnkneeandIll.png/revision/latest/scale-to-width-down/1000?cb=20210722231851" alt="foto" class="foto-circular">
+                <h2 class="title-card">Sobre Mí</h2>
+                <p class="text-card">
+                    Mi nombre es Connie Gaitan Gutierrez. Tengo 16 años y actualmente estoy estudiando Informática Personal y Profesional en la E.E.S.T. N°6 "Chacabuco" Morón.
+                </p>
+                <img src="https://media.tenor.com/AN83u7YyqwUAAAAM/maxwell-the-cat.gif" alt="uiia" class="gif1">
+            </div>
+
+            <div class="secciones">
+                
+                <section id="proyectos" class="seccion">
+                    <div class="cuadro-seccion">
+                        <div class="cuadro-tp">
+                            <h2> Mis Proyectos</h2>
+
+                            <h3>1. Página Web de Recetario</h3>
+                            <p>Desarrollé un sitio web simple en HTML, CSS y JavaScript que permite guardar y visualizar recetas de cocina. Fue uno de mis primeros proyectos aplicando diseño responsivo y almacenamiento local con JavaScript.</p>
+
+                            <h3>2. Calculadora Básica</h3>
+                            <p>Utilizando JavaScript puro, realicé una calculadora funcional con operaciones básicas (suma, resta, multiplicación y división). Me ayudó a practicar manipulación del DOM y eventos.</p>
+
+                            <h3>3. Sistema de Login Local</h3>
+                            <p>Simulé un sistema de inicio de sesión para una página web, donde se validan credenciales desde un arreglo local. Este proyecto me permitió reforzar estructuras condicionales y funciones en JavaScript.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contacto" class="seccion">
+                    <div class="cuadro-seccion">
+                        <article>
+                            <h2>Contáctame</h2>
+                            <p>¡Me encantaría saber de ti! Llena el formulario a continuación para ponerte en contacto.</p>
+                
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="nombreCompleto">Nombre Completo:</label>
+                                    <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <button type="submit">Enviar Mensaje</button>
+                            </form>
+                        </article>
+                    </div>
+                </section>
+
+                <div id="mensajeAgradecimiento" class="mensaje-agradecimiento"></div>
+
+
+                <section id="habilidades" class="seccion">
+                    <div class="cuadro-seccion">
+                        <div class="habilidades-grid">
+                            <div class="cuadro-habilidad">
+                                <h3>Manejo de lenguajes de programacion</h3>
+                                <ul>
+                                    <li> - HTML (Intermedio)</li>
+                                    <li> - CSS (Intermedio)</li>
+                                    <li> - JavaScript (Básico)</li>
+                                    <li> - C++ (Basico)</li>
+                                </ul>
+                            </div>
+                            <div class="cuadro-habilidad">
+                                <h3>Idiomas</h3>
+                                <ul>
+                                    <li> - Español (Nativo)</li>
+                                    <li> - Inglés (Básico)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="peliculas" class="seccion">
+                    <div class="cuadro-seccion">
+                        <article class="pelicula-card">
+                            <img src="https://mx.web.img3.acsta.net/img/e8/bd/e8bdc08b54f111494138a85ca471a2fb.jpg" alt="Peli1">
+                            <h3>WONDERLAND</h3>
+                            <p>La inteligencia artificial permite a las personas hablar con los seres queridos que han perdido. Jeong-in, una azafata de vuelo, pide reunirse con su novio Tae-joo, que está en coma.</p>
+                        </article>
+
+                        <article class="pelicula-card">
+                            <img src="https://i.ytimg.com/vi/r1u1zWsY4DU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2MJXOzTDC9sha8EhJ9QcCPIZhdQ" alt="Peli2">
+                            <h3>JOHN WICK 1</h3>
+                            <p>En Nueva York, John Wick, un asesino a sueldo retirado, vuelve otra vez a la acción para vengarse de los gánsteres que le quitaron todo: El amor de su vida, su mascota e incluso su libertad..</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="nav-redes">
+            <ul class="redes-texto">
+                <li>
+                    <a href="https://www.instagram.com/leomessi/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="30" height="30">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Coquitas08" target="_blank">
+                        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=FFFFFF" alt="GitHub" width="30" height="30">
+                        GitHub
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
