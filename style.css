@@ -1,0 +1,433 @@
+/*PARTE DE ARRIBA*/
+
+header { /*contenedor*/
+  background-color:#c2415d80;
+  padding: 10px 10px;
+  /* top, left, right y z-index están bien si el header es fijo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Aumentamos el z-index para asegurar que esté encima */
+}
+
+.nav-container {/*contenedor del nav*/
+  display: flex;
+  justify-content: space-between; /* logo a la izq, lista a la der */
+  align-items: center;
+  /* Añadimos un ancho máximo para el contenido si es necesario */
+  max-width: 1200px; /* Ejemplo: ajusta esto a tu diseño */
+  margin: 0 auto; /* Centra el contenido del nav-container */
+  width: 100%; /* Asegura que ocupe el ancho disponible */
+}
+
+.logo-title {/*seccion titulo-logo*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title img {/*logo*/
+  height: 70px;
+  width: 70px;
+}
+
+.logo-title .titulo {/*titulo del logo*/
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  white-space: nowrap; /* Evita que el título se rompa en varias líneas */
+}
+
+/* MODIFICACIONES PARA EL MENÚ EN EL HEADER */
+/* Ajustamos la lista principal del nav-container */
+.nav-container ul {/*lista en general - ahora es el menú principal */
+  display: flex; /* Mantiene los ítems en línea */
+  list-style: none; /* Elimina los puntos de la lista */
+  gap: 30px; /* Aumenta el espacio entre los ítems para que se vean mejor */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container a {/*items de la lista (individual)*/
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em; /* Hace los enlaces un poco más grandes */
+  padding: 5px 0; /* Un poco de padding vertical */
+  transition: color 0.3s ease; /* Suaviza el cambio de color al pasar el mouse */
+}
+
+.nav-container a:hover {
+  color: #e0e0e0; /* Un color más claro al pasar el mouse */
+}
+
+
+/*****************************************************/
+
+/* MODIFICACIONES ESPECÍFICAS PARA EL SIDEBAR CUANDO ESTÁ EN EL HEADER */
+.sidebar {/*BARRA LATERAL (MENU)*/
+  position: static; 
+  right: auto; 
+  top: auto; 
+  width: auto; 
+  height: auto; 
+  background-color: transparent; 
+  transition: none; 
+  z-index: auto; 
+  
+  /* Aseguramos que la lista dentro del sidebar se muestre */
+  display: block; /* Asegura que el sidebar mismo sea visible como un bloque dentro del flex de nav-container */
+}
+
+.sidebar.abierto {/*BARRA MODO - Esto ya no tendrá efecto para el menú en el header */
+  right: auto; /* Se mantiene para compatibilidad, pero es irrelevante */
+}
+
+.sidebar-title{ /*TITULO DEL SIDEBAR*/
+  display: none; /* CAMBIO CLAVE: Oculta el título "Menú" ya que no es un sidebar desplegable */
+  /* Mantengo tus estilos originales por si decides volver a usarlos en responsive */
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: arial;
+  top: 60px;
+  text-align: center;
+}
+
+/* MODIFICACIONES PARA EL BOTÓN DE MENÚ */
+.menu-toggle {
+  /* CAMBIO CLAVE: Por defecto, ocultamos el botón de menú para pantallas grandes */
+  display: none; 
+  /* Tus estilos originales se mantienen, pero solo se aplicarán si mostramos el botón con media queries */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 10px 15px;
+  border: none;
+  background-color: white;
+  color: #c2415d;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/********************************************************/
+
+/* El resto de tu CSS se mantiene igual, ya que no afecta directamente al header/nav */
+
+html {/*FONDO DE LA PAGINA*/
+  background-color: rgb(197, 171, 185);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/*FOOTER. NO TOCAR*/
+footer{
+  background-color:rgb(194, 65, 93, 0.5);
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.redes-texto {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.redes-texto li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.redes-texto li a:hover {
+  color: rgb(161, 49, 77);
+}
+
+.redes-texto img {
+  transition: transform 0.3s ease;
+}
+
+.redes-texto img:hover {/*cuenado el mouse esta apoyado ahi arriba, la foto se agranda*/
+  transform: scale(1.2);
+}
+/****************************************************************/
+
+/**CUADRO DEL SOBRE MI, NO TOCAR**/
+.sobre-mi {
+  flex: 1; /* menos espacio que secciones */
+  min-width: 250px; /* para que no se haga demasiado pequeño */
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(110, 4, 4, 0.2);
+  background-color: rgb(194, 65, 93, 0.5);
+  position: relative; /* por si acaso */
+  z-index: 1; /* para que esté por encima del contenido si es necesario */
+  margin-left: 10px; /* un pequeño espacio a la izquierda para separarlo */
+}
+
+.foto-circular{/*foto de la card*/
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.title-card{/*titulo de la card*/
+  background-color: rgb(194, 65, 93,0.8);
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.text-card{/*letra de la card*/
+  font-family: sans-serif;
+  font-size: 1em;
+  color: rgb(63, 6, 6);
+}
+
+.gif1{
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+/************************************/
+
+/****CONTENIDO DE PROYECTOS, ETC*****/
+.seccion {
+  display: none; /* ocultas por defecto */
+}
+
+.seccion.mostrar {
+  display: block; /* solo se muestra la que tiene esta clase */
+}
+
+.cuadro-seccion {
+  background-color: rgba(194, 65, 93, 0.5); /* Mantienes el color */
+  padding: 20px;
+  margin: 1px 0;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 458px;
+}
+
+.contenido-principal {
+  display: flex;
+  justify-content: space-between; /* distribuye espacio entre hijos */
+  align-items: flex-start;
+  padding: 10px;
+  gap: 20px;
+  flex-wrap: nowrap; /* evita que se rompan a la siguiente línea */
+}
+
+.secciones {
+  flex: 2;
+  min-width: 0;
+  max-width: 1000px;
+}
+
+/******CONTENIDO DE PELICULAS*******/
+.pelicula-card {
+  display: inline-block;
+  max-width: 45%;
+  padding: 2%;
+  text-align: justify;
+  background-color: #ffffffe6;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px #00000033;
+}
+
+.pelicula-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 10px;
+}
+
+.pelicula-card h3 {
+  background-color: #c2415d;
+  margin: 5px 0 5px;
+  font-size: 1.2em;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.pelicula-card p {
+  font-size: 0.95em;
+  color: #333;
+}
+
+/*******************************************/
+/* Estilos para el contenedor de los cuadros de habilidad */
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 2px;
+}
+
+/* Estilos para cada cuadro individual (Educación, Habilidades, Idiomas) */
+.cuadro-habilidad {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.cuadro-habilidad h3 {
+  color: #333;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c2415d;
+  padding-bottom: 10px;
+}
+
+.cuadro-habilidad ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cuadro-habilidad ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Estilos para el formulario de Contacto */
+
+#contacto h2 {
+  color: #ffffff; /* Color para el título de la sección de contacto */
+  text-align: center;
+  font-size: 2em;
+}
+
+#contacto p {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el formulario de Contacto */
+#contactForm {
+  max-width: 440px; /* **CAMBIO CLAVE**: Un ancho máximo más específico para el formulario */
+  margin: 0 auto; /* Centra el formulario dentro de su contenedor (cuadro-seccion) */
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre los grupos de formulario */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  outline: none; /* Quita el contorno al enfocar */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+  border-color: #c2415d; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 0 3px rgba(194, 65, 93, 0.2); /* Sombra suave al enfocar */
+}
+
+#contactForm button[type="submit"] {
+  background-color: #c2415d;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px; /* Espacio encima del botón */
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #a1364d; /* Un tono más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+.mensaje-agradecimiento {/*esta fuera del contacto, por lo que lo podemos poner dond qeuramos*/
+  text-align: left;
+  color: #ffffff; /* Texto verde oscuro */
+  display: none; /* Oculto por defecto */
+  font-weight: bold;
+  font-size: 1.1em;
+  
+}
+
+/* ======== ESTILOS PARA LA SECCIÓN DE PROYECTOS ======== */
+
+.proyectos .cuadro-seccion {
+  background-color: rgba(194, 65, 93, 0.5); /* Mantienes el color */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.proyectos h2 {
+  text-align: center;
+  color: #c2415d;
+  font-size: 2em;
+  margin-bottom: 20px;
+  margin-top: 1px;
+}
+
+.proyectos h3 {
+  font-size: 1.3em;
+  color: #a1364d;
+  margin-top: 20px;
+}
+
+.proyectos p {
+  font-size: 1.05em;
+  color: #333;
+}
+
+
+
