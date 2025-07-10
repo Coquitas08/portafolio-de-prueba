@@ -12,7 +12,7 @@ El archivo index.html es la base de la página. Al principio, en la parte <head>
 
 Dentro del <body>, la página se divide en varias partes:
 
-La cabecera (<header>) es la parte de arriba. Tiene mi logo y el título del portafolio. Al lado, está el menú, que en pantallas grandes se ve como una lista de opciones. Cada opción del menú, al hacer clic, usa un pequeño código (onclick="mostrarSeccion('idSeccion')") para mostrar una parte diferente de la página.
+La cabecera (<header>):es la parte de arriba. Tiene un logo de caricatura (usado de ejemplo) y el título del portafolio. Al lado, está el menú, que en pantallas grandes se ve como una lista de opciones. Cada opción del menú, al hacer clic, usa un pequeño código (onclick="mostrarSeccion('idSeccion')") para mostrar una parte diferente de la página.
 
 La sección principal (<main>) es donde está todo el contenido. Aquí, la página se divide en dos: por un lado, una tarjeta "Sobre Mí" con mi foto y un texto sobre quién soy; y por otro, las secciones de contenido que cambian cuando usas el menú. Por ejemplo, verás mis proyectos, una parte para contactarme con un formulario, mis habilidades y, por último, algunas películas. Estas secciones están ocultas al principio y solo se muestran cuando las eliges en el menú.
 
