@@ -1,4 +1,3 @@
-# portafolio-de-prueba
 Portafolio básico hecho con HTML, CSS y Java Script.
 
 |----------------- Portafolio-de-prueba
@@ -10,13 +9,13 @@ Portafolio básico hecho con HTML, CSS y Java Script.
 |----------index.html
 |---------------
 
-  ###1) Introduccion:
+###1) Introduccion:
 
 Este repositorio guarda el código de un portafolio personal de prueba. Es una página web sencilla hecha con HTML, CSS y JavaScript para mostrar 4 secciones: proyectos, habilidades, peliculas y un formulario de contacto.
 
 El objetivo de la pagina es que cualquiera pueda ver rápidamente la informacion que dije antes en las secciones, basicamente. Todo está organizado en carpetas simples: css/ para el estilo de la pagina, JAVA/ para el código que permite funcionalidades addicionales , y index.html es el archivo principal que abre el portafolio (siendo este la base de la pagina web).
 
-  ###2) HTML:
+###2) HTML:
      
 El archivo index.html es la base de la página. Al principio, en la parte <head>, se le dice al navegador cómo debe cargar la página y dónde encontrar los estilos y el código JavaScript. 
 
@@ -32,11 +31,11 @@ Article: Incluida dentro de todas las secciones utilizadas, esta etiqueta se usa
 
 Footer: Es la parte de abajo. Contiene enlaces a mis redes sociales, como Instagram y GitHub, con iconos que se agrandan un poco si pasas el ratón por encima.
 
-  ###3. CSS:
+###3. CSS:
 
 El archivo style.css se encarga de que todo se vea bien. Decide los colores, tamaños, dónde va cada cosa y cómo se mueven algunos elementos. Por ejemplo, le da el color de fondo a la página, hace que la cabecera se quede fija arriba, y que el menú se vea ordenado. También define cómo se ven las tarjetas de proyectos, las cajas de habilidades y el formulario de contacto, añadiéndoles sombras y efectos cuando pasas el ratón por encima. Las secciones de contenido tienen un estilo común, y el pie de página también tiene su propio diseño para los enlaces de redes sociales.
 
-  ###4. JAVA SCRIPT:
+###4. JAVA SCRIPT:
 
 El archivo java.js hace que la página sea interactiva. La función clave es mostrarSeccion(id). Cuando haces clic en una opción del menú, esta función esconde todas las secciones y luego muestra solo la que elegiste. Esto hace que la página cambie de contenido sin recargarse. Además, al cargar la página por primera vez, el portafolio siempre muestra la sección de "Proyectos".
 
